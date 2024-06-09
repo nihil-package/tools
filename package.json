@@ -1,0 +1,57 @@
+{
+  "name": "nihilncunia-tools",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NIHILncunia/nihilncunia-diceroll.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NIHILncunia/nihilncunia-diceroll/issues"
+  },
+  "homepage": "https://github.com/NIHILncunia/nihilncunia-diceroll#readme",
+  "scripts": {
+    "prepack": "yarn run build",
+    "build": "yarn run clean && yarn run build:tsc && yarn run build:js",
+    "build:tsc": "tsc --emitDeclarationOnly",
+    "build:js": "node build.js",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [],
+  "author": "nihilncunia",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dayjs": "^1.11.11",
+    "jsonwebtoken": "^9.0.2",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^20.14.2",
+    "@types/uuid": "^9.0.8",
+    "@typescript-eslint/eslint-plugin": "^7.12.0",
+    "@typescript-eslint/parser": "^7.12.0",
+    "esbuild": "^0.21.4",
+    "eslint": "8.57.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.34.2",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "typescript": "^5.4.5"
+  }
+}
