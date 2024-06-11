@@ -4,9 +4,8 @@
   },
   "compilerOptions": {
     "esModuleInterop": true,
-    "jsx": "preserve",
-    "target": "es6" /* 최신 브라우저는 es6을 대부분 지원한다. */,
-    "module": "ES6" /* 모듈 시스템을 지정한다. */,
+    "target": "ES2022" /* 최신 브라우저는 es6을 대부분 지원한다. */,
+    "module": "CommonJS" /* 모듈 시스템을 지정한다. */,
     "lib": [
       "es5",
       "es6",
@@ -17,13 +16,10 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
-    "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
-    "resolveJsonModule": true,
     "isolatedModules": true,
-    "incremental": true
+    "noEmit": true
   },
-  "include": [
-    "src/index.ts"
-  ] /* 컴파일할 대상을 명시해 준다. */
+  "include": ["src"], /* 컴파일할 대상을 명시해 준다. */
+  "exclude": ["node_modules"]
 }

@@ -1,33 +1,19 @@
 {
-  "name": "nihilncunia-tools",
+  "name": "@nihilncunia/tools",
   "version": "0.0.1",
-  "main": "index.js",
-  "type": "module",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    }
-  },
-  "files": [
-    "dist",
-    "src"
-  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NIHILncunia/nihilncunia-diceroll.git"
+    "url": "git+https://github.com/NIHILncunia/nihil-tools.git"
   },
   "bugs": {
-    "url": "https://github.com/NIHILncunia/nihilncunia-diceroll/issues"
+    "url": "https://github.com/NIHILncunia/nihil-tools/issues"
   },
-  "homepage": "https://github.com/NIHILncunia/nihilncunia-diceroll#readme",
+  "homepage": "https://github.com/NIHILncunia/nihil-tools#readme",
   "scripts": {
-    "prepack": "yarn run build",
-    "build": "yarn run clean && yarn run build:tsc && yarn run build:js",
-    "build:tsc": "tsc --emitDeclarationOnly",
-    "build:js": "node build.js",
-    "clean": "rm -rf dist"
+    "build": "tsup"
   },
   "keywords": [],
   "author": "nihilncunia",
@@ -52,6 +38,7 @@
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-react": "^7.34.2",
     "eslint-plugin-react-hooks": "^4.6.2",
+    "tsup": "^8.1.0",
     "typescript": "^5.4.5"
   }
 }

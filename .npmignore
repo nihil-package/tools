@@ -1,4 +1,4 @@
-/dist
+/src
 /node_modules/
 /.idea/
 
@@ -6,3 +6,5 @@
 .env
 .DS_Store
 
+tsconfig.json
+tsup.config.ts

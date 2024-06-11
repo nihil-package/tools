@@ -8,12 +8,12 @@ interface NihilTool {
   jwt: Jwt;
 }
 
-const Nihil: NihilTool = {
+const nihilTool: NihilTool = {
   common: new Common(),
   calendar: new Calendar(),
   jwt: new Jwt(),
 };
 
 export {
-  Nihil
+  nihilTool
 };
