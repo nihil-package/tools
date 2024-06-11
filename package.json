@@ -40,5 +40,8 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "tsup": "^8.1.0",
     "typescript": "^5.4.5"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
