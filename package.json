@@ -5,7 +5,7 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "repository": {
-    "url": "https://github.com/NIHILncunia/nihil-tools"
+    "url": "git+https://github.com/NIHILncunia/nihil-tools.git"
   },
   "bugs": {
     "url": "https://github.com/NIHILncunia/nihil-tools/issues"
@@ -15,7 +15,8 @@
     "build": "tsup"
   },
   "keywords": [
-    "NIHILncunia", "tool"
+    "NIHILncunia",
+    "tool"
   ],
   "author": "nihilncunia",
   "license": "MIT",
