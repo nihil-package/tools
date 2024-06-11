@@ -1,5 +1,5 @@
 {
-  "name": "tools",
+  "name": "@nihilncunia/tools",
   "version": "0.0.2",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -14,7 +14,9 @@
   "scripts": {
     "build": "tsup"
   },
-  "keywords": [],
+  "keywords": [
+    "NIHILncunia", "tool"
+  ],
   "author": "nihilncunia",
   "license": "MIT",
   "dependencies": {

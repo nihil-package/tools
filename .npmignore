@@ -9,4 +9,4 @@
 tsconfig.json
 tsup.config.ts
 .editorconfig
-.eslintrc.js
+.eslintrc.cjs
