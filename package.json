@@ -1,5 +1,5 @@
 {
-  "name": "@nihilncunia/tools",
+  "name": "@nihilapp/tools",
   "version": "0.0.2",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -18,7 +18,7 @@
     "NIHILncunia",
     "tool"
   ],
-  "author": "nihilncunia",
+  "author": "nihilncunia7556",
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
