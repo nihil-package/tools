@@ -12,6 +12,7 @@
   },
   "homepage": "https://github.com/nihil-package/tools#readme",
   "scripts": {
+    "prebuild": "tsup",
     "build": "tsup"
   },
   "keywords": [
