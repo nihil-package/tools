@@ -235,12 +235,18 @@ export class Calendar {
     };
   }
 
-  public dateToFormat(date?: (string | number | Date)) {
-    return this.date(date).format('YYYY년 MM월 DD일');
+  public dateToFormat(
+    date?: (string | number | Date),
+    format?: string
+  ) {
+    return this.date(date).format(format || 'YYYY년 MM월 DD일');
   }
 
-  public dateToTimeFormat(date?: (string | number | Date)) {
-    return this.date(date).format('YYYY년 MM월 DD일 HH:mm');
+  public dateToTimeFormat(
+    date?: (string | number | Date),
+    format?: string
+  ) {
+    return this.date(date).format(format || 'YYYY년 MM월 DD일 HH:mm');
   }
 
   public UTCString(date?: (string | number | Date)) {
