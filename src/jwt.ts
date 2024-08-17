@@ -6,11 +6,16 @@ export interface TokenInfo<T> {
   payload: T;
 }
 
+export interface TokenPayload<T> {
+  payload: T;
+  secret: string;
+}
+
 export class Jwt {
-  public async createAccessToken<T extends object>(info: T) {
+  public async createAccessToken<T extends object>(tokenInfo: TokenPayload<T>) {
     return sign(
-      info,
-      process.env.NEXT_PUBLIC_ACCESS_SECRET,
+      tokenInfo.payload,
+      tokenInfo.secret,
       {
         algorithm: 'HS256',
         expiresIn: '1h',
@@ -18,10 +23,10 @@ export class Jwt {
     );
   }
 
-  public async createRefreshToken<T extends object>(info: T) {
+  public async createRefreshToken<T extends object>(tokenInfo: TokenPayload<T>) {
     return sign(
-      info,
-      process.env.NEXT_PUBLIC_REFRESH_SECRET,
+      tokenInfo.payload,
+      tokenInfo.secret,
       {
         algorithm: 'HS256',
         expiresIn: '90days',
@@ -31,12 +36,9 @@ export class Jwt {
 
   public async verifyToken<Payload>(
     token: string,
-    mode: ('accessToken' | 'refreshToken')
+    mode: ('accessToken' | 'refreshToken'),
+    secret: string
   ): Promise<TokenInfo<Payload>> {
-    const secret = mode === 'accessToken'
-      ? process.env.NEXT_PUBLIC_ACCESS_SECRET
-      : process.env.NEXT_PUBLIC_REFRESH_SECRET;
-
     return verify(token, secret, {
       algorithms: [ 'HS256', ],
     }) as unknown as TokenInfo<Payload>;
