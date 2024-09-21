@@ -51,7 +51,6 @@ module.exports = {
     ],
     'object-curly-spacing': [ 'warn', 'always', ],
     'no-shadow': 'off',
-    indent: 'off',
     'comma-dangle': [ 'warn', {
       arrays: 'always',
       functions: 'never',
@@ -89,17 +88,6 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
-    '@typescript-eslint/indent': [ 'warn', 2, {
-      SwitchCase: 1,
-      FunctionExpression: {
-        parameters: 1,
-      },
-      ignoredNodes: [
-        'FunctionExpression > .params[decorators.length > 0]',
-        'FunctionExpression > .params > :matches(Decorator, :not(:first-child))',
-        'ClassBody.body > PropertyDefinition[decorators.length > 0] > .key',
-      ],
-    }, ],
 
     // 리액트 규칙
     'react/jsx-curly-spacing': [ 'error', { when: 'never', children: true, }, ],

@@ -18,5 +18,6 @@ const nihilTool: NihilTool = {
 };
 
 export {
-  nihilTool
+  nihilTool,
+  type NihilTool
 };
